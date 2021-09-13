@@ -1,0 +1,155 @@
+body {
+    background-image: url(../img/fondo.jpg);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: oblique;
+    padding: 20px auto;
+    background: #2A3160 ;
+    box-shadow: 1px 1px 1px 5px black;
+}
+header:hover {
+    background: #F4F4F4;
+}
+.informacion-de-la-fecha {
+    font-family: 'Shrikhand', cursive;
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 25px;
+   animation-name: mianimacion;
+   animation-duration: 2s;
+}
+h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 25px;
+    animation-name: mianimacion;
+    animation-duration: 2s;
+}
+h3 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 25px;
+    animation-name: mianimacion;
+    animation-duration: 2s;
+}
+.informacion {
+    display: grid;
+    grid-template-areas: 
+    "resultados goles partidos"
+    "noticia1 goles1 partidos1"
+    "noticia2 goles2 partidos2"
+    "noticia3 goles3 partidos3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-gap: 10px;
+    align-content: center;
+}
+.resultados {
+   grid-area: resultados;
+   text-align: center;
+}
+.goles {
+    grid-area: resultados;
+    text-align: center;
+}
+.partidos {
+    grid-area: resultados;
+    text-align: center;
+}
+.noticia__1{
+    grid-area: noticia1;
+    background-color: rgba(199, 23, 23, 0.308);
+    text-align: center;
+}
+.noticia__2{
+    grid-area: noticia2;
+    background-color: rgba(56, 70, 33, 0.356);
+    text-align: center;}
+.noticia__3{
+grid-area: noticia3;
+background-color: rgba(57, 80, 80, 0.514);
+text-align: center;
+}
+.goles1{
+    grid-area: goles1;
+    text-align: justify;
+    background-color: white;
+}
+.goles2{
+    grid-area: goles2;
+    text-align: justify;
+    background-color: white;
+}
+.goles3{
+    grid-area: goles3;
+    text-align: justify;
+    background-color: white;
+}
+
+.partidos1{
+    grid-area: partidos1;
+    text-align: justify;
+    background-color: white;
+}
+.partidos2{
+    grid-area: partidos2;
+    text-align: justify;
+    background-color: white;
+}
+.partidos3{
+    grid-area: partidos3;
+    text-align: justify;
+    background-color: white;
+
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right,#CC3300 ,#FFFFFF );
+    justify-content: space-between;
+    align-items: center;
+    bottom: auto;
+    width: 100%;
+    padding: 20px;
+}
+.footer__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.footer__menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.footer__redes {
+    margin: 10px auto;
+}
+.footer__redes a img {
+    width: 30px;
+    height: auto;
+}
+@keyframes mianimacion {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150PX); }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0); } 
+}
+
+

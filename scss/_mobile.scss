@@ -1,0 +1,197 @@
+body {
+    background-image: url(../img/fondo.jpg);
+    .header {
+        background-color: #2A3160;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Bangers', cursive;
+        font-size: 20px;
+        font-weight: 800;
+        font-style: oblique;
+        width: 100%;
+        padding: 20px;
+        &__logo {
+            margin: 10px;
+            img {
+            height: 50px;
+            width: auto;
+            }
+        }
+        &__menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            li {
+                margin: 0px 10px;
+                a {
+                    text-decoration: none;
+                    color: teal;
+                }
+            }
+        }
+
+    }
+    .header:hover {
+        background: #F4F4F4;
+    }
+    .titulo-principal {
+        font-family: 'Shrikhand', cursive;
+        font-size: 40px;
+        font-weight: 900;
+        padding: 50px;
+        text-align: center;
+        animation-name: mianimacion;
+        animation-duration: 2s;
+    }
+    .inicio {
+        display: grid;
+        grid-template-areas: 
+        "titulo" 
+        "box1"
+        "box2"
+        "box3"; 
+        grid-template-columns: 1fr ;
+        grid-template-rows: 50px 1fr 1fr 1fr;
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: flex-start;
+        padding: 20px;
+        .seleccion {
+            grid-area: box1;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            background-color: #B2B2B2;
+            color: black;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 15px;
+            padding: 3px ;
+            img {
+                width: 90%;
+            }
+            &__texto {
+                font-family: 'Times New Roman', serif;
+                font-style: oblique;
+                font-weight: bolder;
+                text-align: justify;
+                padding: 20px;
+            } 
+            
+        }
+        .seleccion img:hover {
+            transform: translate(-15px, -15px);
+            transition: .5s cubic-
+        }
+        .river {
+            grid-area: box2;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            background: #B2B2B2;
+            color: black;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 15px;
+            padding: 3px ;
+            img {
+                width: 90%;
+            }
+            &__texto {
+                font-family:'Times New Roman', serif;
+                font-style: obliqu e;
+                font-weight: bolder;
+                text-align: justify;
+                padding: 20px;
+            }
+        }
+        .river img:hover {
+            transform: translate(-15px, -15px);
+            transition: .5s cubic-
+        }
+        .torneo {
+            grid-area: box3;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            background: #B2B2B2;
+            color: black;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 15px;
+            img {
+                width: 90%;
+            }
+            &__texto {
+                font-family: 'Times New Roman', serif;
+                font-style: oblique;
+                font-weight: bolder;
+                text-align: justify;
+                padding: 20px;
+            }
+        }
+        .torneo img:hover {
+            transform: translate(-15px, -15px);
+            transition: .5s cubic-
+        }
+       
+    }
+    .subtitulo {
+        font-family: 'Shrikhand', cursive;
+        font-size: 38px;
+        font-weight: 900;
+        text-align: center;
+        padding-top: 25px;
+        animation-name: mianimacion;
+        animation-duration: 2s;
+    }
+    .formulario {
+        padding: 20px;
+        margin: 10px;
+        &__fielset {
+            background:linear-gradient(to bottom, #CC4B4D  ,#1F618D);
+            border: 2px solid #34495E;
+            padding: 10px;
+            animation-name: mianimacion;
+            animation-duration: 2s;
+            .titulo-formulario {
+                font-family: 'Luckiest Guy', cursive;
+                font-weight: 900;
+                text-align: center;
+                text-align: center;
+                font-size: 25px;
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: linear-gradient(to right,#CC3300 ,#FFFFFF );
+        justify-content: space-between;
+        align-items: center;
+        position:absolute;
+        bottom:auto;
+        width:100%;
+        padding: 20px;
+        &__menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            li {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: bold;
+                
+                }
+            }
+        }
+        &__redes {
+            margin: 10px auto;
+        }
+    }
+
+    
+
+   
+}

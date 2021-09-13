@@ -1,0 +1,103 @@
+@media screen and (min-width:1024px) {
+    body {
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: 'Bangers', cursive;
+            font-size: 20px;
+            font-weight: 800;
+            font-style: oblique;
+            padding: 20px auto;
+            background: #2A3160 ;
+            box-shadow: 1px 1px 1px 5px black;
+        }
+        .inicio {
+            display: grid;
+            grid-template-areas: "titulo titulo titulo "
+            "box1 box2 box3" ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 1fr;
+            grid-gap: 10px;
+            justify-items: center;
+            align-items: flex-start; 
+            .seleccion {
+                grid-area: box1;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                background-color: #B2B2B2;
+                color: black;
+                box-shadow: 5px 5px 5px black;
+                border-radius: 15px;
+                padding: 3px ;
+                img {
+                    width: 450px;
+                    height: 300px;
+                }
+            }
+            .river {
+                grid-area: box2;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                background: #B2B2B2;
+                color: black;
+                box-shadow: 5px 5px 5px black;
+                border-radius: 15px;
+                padding: 3px ;
+                img {
+                    width: 450px;
+                    height: 300px;
+                }
+            }
+            .torneo {
+                grid-area: box3;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                background: #B2B2B2;
+                color: black;
+                box-shadow: 5px 5px 5px black;
+                border-radius: 15px;
+                padding: 3px;
+                img {
+                    width: 410px;
+                    height: 300px;
+                }
+            }
+        }
+        .footer {
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(to right,#CC3300 ,#FFFFFF );
+            justify-content: space-between;
+            align-items: center;
+            bottom: auto;
+            width: 100%;
+            padding: 20px;
+            &__menu {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &__redes {
+                margin: 10px auto;
+                a{ 
+                    img {
+                        width: 30px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

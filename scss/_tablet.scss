@@ -1,0 +1,20 @@
+@media screen and (min-width:768px) {
+    .header {
+        flex-direction: row;
+        width: 100%;
+        &__menu {
+            flex-direction: row;
+        }   
+    }
+    .inicio {
+        display: grid;
+        grid-template-areas: "titulo titulo titulo "
+        "box1 box2 box3" ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: flex-start; 
+    }
+   
+}

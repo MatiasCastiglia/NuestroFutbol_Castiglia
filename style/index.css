@@ -1,0 +1,191 @@
+body {
+    background-image: url(../img/fondo.jpg);
+    
+    
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: oblique;
+    padding: 20px auto;
+    background: #2A3160 ;
+    box-shadow: 1px 1px 1px 5px black;
+    
+}
+
+header:hover {
+    background: #F4F4F4;
+}
+
+.titulo-principal {
+    font-family: 'Shrikhand', cursive;
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 25px;
+   animation-name: mianimacion;
+   animation-duration: 2s;
+}
+@keyframes mianimacion {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150PX); }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0); } 
+}
+
+.inicio {
+    display: grid;
+    grid-template-areas: "titulo titulo titulo "
+    "box1 box2 box3" ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: flex-start; 
+}
+.seleccion {
+    grid-area: box1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: #B2B2B2;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    padding: 3px ;
+}
+.seleccion__texto {
+    font-family: 'Times New Roman', serif;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+.seleccion img {
+    width: 450px;
+    height: 300px;
+}
+.seleccion img:hover {
+    transform: translate(-15px, -15px);
+		transition: .5s cubic-
+}
+
+.river {
+    grid-area: box2;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background: #B2B2B2;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    padding: 3px ;
+}
+.river__texto {
+    font-family: 'Times New Roman', serif;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.river img {
+    width: 450px;
+    height: 300px;
+}
+.river img:hover { 
+    transform: translate(-15px, -15px);
+    transition: .5s cubic-
+}
+
+.torneo {
+    grid-area: box3;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background: #B2B2B2;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    padding: 3px;
+}
+.torneo__texto {
+    font-family: 'Times New Roman', serif;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.torneo img {
+    width: 410px;
+    height: 300px;
+}
+.torneo img:hover {
+    transform: translate(-15px, -15px);
+		transition: .5s cubic-
+}
+
+.container {
+    padding-top: 15px;
+}
+
+.subtitulo {
+    font-family: 'Shrikhand', cursive;
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 25px;
+   animation-name: mianimacion;
+   animation-duration: 2s;
+}
+
+.formulario__fieldset {
+    width: 100%;
+    background:linear-gradient(to bottom, #CC4B4D  ,#1F618D);
+    border: 2px solid #34495E;
+    padding: 10px;
+    animation-name: mianimacion;
+    animation-duration: 2s;
+    
+}
+
+.titulo-formulario {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right,#CC3300 ,#FFFFFF );
+    justify-content: space-between;
+    align-items: center;
+    bottom: auto;
+    width: 100%;
+    padding: 20px;
+}
+.footer__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.footer__menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.footer__redes {
+    margin: 10px auto;
+}
+.footer__redes a img {
+    width: 30px;
+    height: auto;
+}
+
+

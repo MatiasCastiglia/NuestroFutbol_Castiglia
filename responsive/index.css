@@ -1,0 +1,210 @@
+/* mobile */
+body {
+    background-image: url(../img/fondo.jpg);
+}
+.header {
+    background-color: #2A3160;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: oblique;
+    width: 100%;
+    padding: 20px;
+}
+.header:hover {
+    background: #F4F4F4;
+}
+.header__logo {
+    margin: 10px;
+}
+.header__logo img {
+    height: 50px;
+    width: auto;
+}
+.header__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.header__menu li{
+    margin: 0px 10px;
+}
+.header__menu li a {
+
+    text-decoration: none;
+    color: teal;
+} 
+.titulo-principal {
+    font-family: 'Shrikhand', cursive;
+    font-size: 40px;
+    font-weight: 900;
+    padding: 50px;
+    text-align: center;
+    animation-name: mianimacion;
+   animation-duration: 2s;
+}
+@keyframes mianimacion {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150PX); }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0); } 
+}
+.inicio {
+    display: grid;
+   grid-template-areas: 
+   "titulo" 
+   "box1"
+   "box2"
+   "box3"; 
+   grid-template-columns: 1fr ;
+   grid-template-rows: 50px 1fr 1fr 1fr;
+   grid-gap: 10px;
+   justify-items: center;
+   align-items: flex-start;
+   padding: 20px;
+}
+.seleccion {
+    grid-area: box1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: #B2B2B2;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    padding: 3px ;
+}
+.seleccion img {
+    width: 100%;
+}
+.seleccion img:hover {
+    transform: translate(-15px, -15px);
+	transition: .5s cubic-
+}
+.seleccion__texto {
+    font-family: 'Times New Roman', serif;
+    font-style: oblique;
+    font-weight: bolder;
+    text-align: justify;
+    padding: 20px;
+} 
+.river {
+    grid-area: box2;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background: #B2B2B2;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    padding: 3px ;
+}
+.river img { 
+    width: 100%;
+}
+.river img:hover {
+    transform: translate(-15px, -15px);
+    transition: .5s cubic-
+}
+.river__texto {
+   font-family:'Times New Roman', serif;
+    font-style: obliqu e;
+    font-weight: bolder;
+    text-align: justify;
+    padding: 20px;
+}
+.torneo {
+    grid-area: box3;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background: #B2B2B2;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    
+}
+.torneo img {
+    width: 100%;
+}
+.torneo img:hover {
+    transform: translate(-15px, -15px);
+	transition: .5s cubic-
+}
+.torneo__texto {
+    font-family: 'Times New Roman', serif;
+    font-style: oblique;
+    font-weight: bolder;
+    text-align: justify;
+    padding: 20px;
+}
+.formulario {
+    padding: 20px;
+}
+.formulario__fielset {
+    background:linear-gradient(to bottom, #CC4B4D  ,#1F618D);
+    border: 2px solid #34495E;
+    padding: 10px;
+    animation-name: mianimacion;
+    animation-duration: 2s;
+}
+.titulo-formulario {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 900;
+    text-align: center;
+    text-align: center;
+    font-size: 25px;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    background-color: linear-gradient(to right,#CC3300 ,#FFFFFF );
+    justify-content: space-between;
+    align-items: center;
+    position:absolute;
+    bottom:auto;
+    width:100%;
+    padding: 20px;
+}
+.footer__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.footer__menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.footer__redes {
+    margin: 10px auto;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        width: 100%;
+        
+        
+    }
+    .header__menu {
+        flex-direction: row;
+    }
+    .imagenes{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo" 
+        "box1 box2 box3";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr  ;
+        padding: 1%;
+        width: 100%;
+    }
+}
