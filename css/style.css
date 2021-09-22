@@ -830,7 +830,39 @@ main {
     main .resumenes .resumen__2 {
       margin: 10px; }
     main .resumenes .resumen__3 {
-      margin: 10px; } }
+      margin: 10px; }
+  /* Tabla de posiciones */
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    main .tabla {
+      background: white;
+      text-align: left;
+      width: 90%;
+      margin: 20px auto;
+      border: 1px solid black;
+      box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.6); }
+      main .tabla th {
+        padding: 1%; }
+      main .tabla tr {
+        border: none;
+        padding: 1%; }
+      main .tabla td {
+        padding: 1%;
+        font-size: 1em; }
+        main .tabla td .img-td {
+          width: 25px;
+          height: 25px; }
+          main .tabla td .img-td img {
+            width: 100%;
+            height: 100%; }
+    main .table-titulo {
+      font-family: 'Bebas Neue';
+      font-size: 50px;
+      font-weight: 800;
+      font-style: italic;
+      text-align: center; } }
 
 @media screen and (min-width: 1024px) {
   body .header {
