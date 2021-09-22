@@ -2,80 +2,86 @@
     body {
         .header {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
-            font-family: 'Bangers', cursive;
-            font-size: 20px;
-            font-weight: 800;
-            font-style: oblique;
-            padding: 20px auto;
-            background: #2A3160 ;
-            box-shadow: 1px 1px 1px 5px black;
+            align-items: center;
         }
         .inicio {
             display: grid;
             grid-template-areas: "titulo titulo titulo "
             "box1 box2 box3" ;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 50px 1fr;
+            grid-template-columns: auto auto auto;
             grid-gap: 10px;
             justify-items: center;
-            align-items: flex-start; 
+            align-items: flex-start;
+            padding: auto;
             .seleccion {
                 grid-area: box1;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 justify-items: center;
                 background-color: #B2B2B2;
                 color: black;
                 box-shadow: 5px 5px 5px black;
                 border-radius: 15px;
-                padding: 3px ;
-                img {
-                    width: 450px;
-                    height: 300px;
+                
+                .imagen-seleccion {
+                    width: 280px;
+                    height:230px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
+               
             }
             .river {
                 grid-area: box2;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 justify-items: center;
                 background: #B2B2B2;
                 color: black;
-                box-shadow: 5px 5px 5px black;
-                border-radius: 15px;
-                padding: 3px ;
-                img {
-                    width: 450px;
-                    height: 300px;
+                box-shadow: 3px 3px 3px black;
+                border-radius: 10px;
+                .imagen-armani {
+                    width: 280px;
+                    height: 230px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
             .torneo {
                 grid-area: box3;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-between;
                 justify-items: center;
                 background: #B2B2B2;
                 color: black;
-                box-shadow: 5px 5px 5px black;
-                border-radius: 15px;
-                padding: 3px;
-                img {
-                    width: 410px;
-                    height: 300px;
+                box-shadow: 3px 3px 3px black;
+                border-radius: 10px;
+                .imagen-torneo {
+                    width: 280px;
+                    height:230px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
         .footer {
             display: flex;
             flex-direction: row;
-            background: linear-gradient(to right,#CC3300 ,#FFFFFF );
+            background: #34495E ;
             justify-content: space-between;
             align-items: center;
             bottom: auto;
             width: 100%;
-            padding: 20px;
             &__menu {
                 list-style: none;
                 display: flex;
@@ -99,5 +105,270 @@
                 }
             }
         }
+        
     }
-}
+    /* Informacion de la fecha */
+    .titulo-info {
+        font-size: 45px;
+        font-weight: 900;
+        text-align: center;
+    }
+    .informacion{
+        display: grid;
+        grid-template-areas: 
+        "resultados goles partidos"
+        "noticia1 goles1 partidos1"
+        "noticia2 goles2 partidos2"
+        "noticia3 goles3 partidos3";
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 100px 1fr 1fr 1fr;
+        grid-gap: 10px;
+        align-content: center;
+        .titulo_1 {
+            grid-area: resultados;
+            text-align: center;
+        }
+        .noticia__1 {
+            grid-area: noticia1;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .titulo-noticia {
+                font-family: 'Bangers', cursive;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .noticia__2 {
+            grid-area: noticia2;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .titulo-noticia {
+                font-family: 'Bangers', cursive;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .noticia__3 {
+            grid-area: noticia3;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .titulo-noticia {
+                font-family: 'Bangers', cursive;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }   
+        .goles {
+            text-align: center;
+        }
+        .goles__1 {
+            grid-area: goles1;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+        .goles__2 {
+            grid-area: goles2;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color:black;
+            }
+        }
+        .goles__3 {
+            grid-area: goles3;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+        .partido {
+            grid-area: partidos;
+            text-align: center;
+            display: inline;
+        }
+        .partido__1 {
+            grid-area: partidos1;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+        .partido__2 {
+            grid-area: partidos2;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color:black;
+            }
+        }
+        .partido__3 {
+            grid-area: partidos3;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+    }
+    /* Partido de la fecha */   
+    .partido-de-la-fecha {
+        font-family: 'Rubik Mono One', sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        animation-name: mianimacion;
+        animation-duration: 3s;
+        text-align: center;
+        padding: 15px;
+    }
+    .fecha {
+        display: flex;
+        flex-direction: row;
+        text-align: center; 
+        align-content: center;
+        justify-content: space-between;
+        .fecha__1 {
+            .img__1 {
+              width: 250px;
+              height: auto;
+              padding: 5px;
+              img {
+                  width: 100%;
+                  background: black;
+                  
+                }
+            }
+        }
+        .fecha__2{
+            .img__2 {
+                width: 260px;
+                height: auto;
+                padding: 5px;
+                img {
+                    width: 100%;
+                    height: 200px;
+                    background: black;
+                    
+                }
+            }
+        }
+        .fecha__3 {
+            .img__3 {
+                width: 250px;
+                height: auto;
+                padding: 5px;
+                img {
+                    width: 250px;
+                    height: 200px;
+                    background: black;
+                    
+                }
+            }        
+        }           
+}    
+
+    /* Resumen */   
+    .resumenes {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-items: center;
+        justify-content: space-between;
+        .resumen__1 { 
+            margin: 10px;
+            img {
+                height: 200px;
+            }          
+        }
+        .resumen__2 { 
+            margin: 30px;
+        }
+        .resumen__3 { 
+            margin: 30px;
+        }
+    }
+    /* Tabla de posiciones */
+        .table__titulo {
+            font-family: 'Bebas Neue';
+            font-size: 50px;
+            font-weight: 800;
+            font-style: italic;
+            text-align: center;
+        }
+        .tabla {
+            background: white ;
+            text-align: left;
+            width: 50%;
+            margin: 20px auto;
+            border: 1px solid black;
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.6);
+            th td{
+                padding: 2px; 
+                 
+            }
+            td {
+                font-family: 'Fjalla One', sans-serif;  
+            }
+        }
+}   

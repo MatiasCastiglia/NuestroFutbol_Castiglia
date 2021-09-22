@@ -31,7 +31,6 @@ body {
                 }
             }
         }
-
     }
     .header:hover {
         background: #F4F4F4;
@@ -40,7 +39,7 @@ body {
         font-family: 'Shrikhand', cursive;
         font-size: 40px;
         font-weight: 900;
-        padding: 50px;
+        padding: 30px;
         text-align: center;
         animation-name: mianimacion;
         animation-duration: 2s;
@@ -53,23 +52,24 @@ body {
         "box2"
         "box3"; 
         grid-template-columns: 1fr ;
-        grid-template-rows: 50px 1fr 1fr 1fr;
         grid-gap: 10px;
         justify-items: center;
-        align-items: flex-start;
-        padding: 20px;
+        padding: 17px;
         .seleccion {
             grid-area: box1;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             justify-items: center;
+            align-items: center;
             background-color: #B2B2B2;
             color: black;
             box-shadow: 5px 5px 5px black;
             border-radius: 15px;
-            padding: 3px ;
-            img {
-                width: 90%;
+            .imagen-seleccion {
+                img {
+                    width: 100%;
+                }
             }
             &__texto {
                 font-family: 'Times New Roman', serif;
@@ -78,7 +78,6 @@ body {
                 text-align: justify;
                 padding: 20px;
             } 
-            
         }
         .seleccion img:hover {
             transform: translate(-15px, -15px);
@@ -88,18 +87,21 @@ body {
             grid-area: box2;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             justify-items: center;
+            align-items: center;
             background: #B2B2B2;
             color: black;
             box-shadow: 5px 5px 5px black;
             border-radius: 15px;
-            padding: 3px ;
-            img {
-                width: 90%;
+           .imagen-armani {
+                img {
+                    width: 100%;
+                }
             }
             &__texto {
                 font-family:'Times New Roman', serif;
-                font-style: obliqu e;
+                font-style: oblique;
                 font-weight: bolder;
                 text-align: justify;
                 padding: 20px;
@@ -113,13 +115,17 @@ body {
             grid-area: box3;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             justify-items: center;
+            align-items: center;
             background: #B2B2B2;
             color: black;
             box-shadow: 5px 5px 5px black;
             border-radius: 15px;
-            img {
-                width: 90%;
+            .imagen-torneo {
+                img {
+                    width: 100%;
+                }
             }
             &__texto {
                 font-family: 'Times New Roman', serif;
@@ -144,28 +150,59 @@ body {
         animation-name: mianimacion;
         animation-duration: 2s;
     }
+    .containerCarrusel{
+            width: 70%;
+        }
     .formulario {
-        padding: 20px;
-        margin: 10px;
-        &__fielset {
-            background:linear-gradient(to bottom, #CC4B4D  ,#1F618D);
-            border: 2px solid #34495E;
-            padding: 10px;
-            animation-name: mianimacion;
-            animation-duration: 2s;
-            .titulo-formulario {
-                font-family: 'Luckiest Guy', cursive;
-                font-weight: 900;
-                text-align: center;
-                text-align: center;
-                font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        background: linear-gradient(to right, #0E6251 , #090B0B);
+        padding: 5%;            
+        text-align: start;
+        border-radius: 30px;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        .eleccion {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .titulo-formulario {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: start;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 2%;
+            color: white;
+        }
+        .qtplp {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 1%;
+            font-weight: 900;
+            font-size: 20px;
+        }
+        .qpdlp {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 1%;
+            font-weight: 900;
+            font-size: 20px;
+        
+        }
+        .imagen-formulario {
+            width: 50%;
+            height: 50%;
+            margin: 10px auto;
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
     }
     .footer {
         display: flex;
         flex-direction: row;
-        background-color: linear-gradient(to right,#CC3300 ,#FFFFFF );
+        background: #34495E ;
         justify-content: space-between;
         align-items: center;
         position:absolute;
@@ -187,11 +224,472 @@ body {
             }
         }
         &__redes {
-            margin: 10px auto;
+            margin: 7px auto;
+            a{
+                img {
+                    width: 20px;
+                    height: auto;
+                }
+            }
+        }
+       
+    }
+}
+/* Informacion de la fecha */
+    
+    .titulo-info {
+        font-family: 'Lobster', cursive;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        padding: 50px;
+        margin: 0px;
+        animation-name: mianimacion;
+        animation-duration: 3s;
+    }
+    .informacion {
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "noticia1"
+        "goles1"
+        "partidos1"
+        "noticia2"
+        "goles2"
+        "partidos2"
+        "noticia3"
+        "goles3"
+        "partidos3";
+        grid-template-columns: 1fr ;
+        grid-template-rows: 70px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding: 15px;
+        grid-gap: 15px;
+        .titulo__1 {
+            grid-area: titulo;
+            text-align: center;
+            color:black;
+            font-family:'Staatliches', cursive;
+            font-size: 25px;
+            font-weight: 800;
+            background: #FFFFFF;
+            border-radius: 10px 100px / 120px;
+        }
+        .noticia__1 {
+            grid-area: noticia1;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .titulo-noticia {
+                font-family: 'Bangers', cursive;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .noticia__2 {
+            grid-area: noticia2;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .titulo-noticia {
+                font-family: 'Bangers', cursive;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .noticia__3 {
+            grid-area: noticia3;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .titulo-noticia {
+                font-family: 'Bangers', cursive;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }   
+        .goles {
+            grid-area:titulo;
+            display: none;
+        }
+        .goles__1 {
+            grid-area: goles1;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+        .goles__2 {
+            grid-area: goles2;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color:black;
+            }
+        }
+        .goles__3 {
+            grid-area: goles3;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+         .partido {
+            grid-area:titulo;
+            display: none;
+        } 
+        .partido__1 {
+            grid-area: partidos1;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
+        }
+        .partido__2 {
+            grid-area: partidos2;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color:black;
+            }
+        }
+        .partido__3 {
+            grid-area: partidos3;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }
         }
     }
-
+    /* Partido de la fecha */
+    main {
+        .partido-de-la-fecha {
+            font-family: 'Rubik Mono One', sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            animation-name: mianimacion;
+            animation-duration: 3s;
+            text-align: center;
+            padding: 15px;
+        }
+        .fecha {
+            display: flex;
+            flex-direction: column;
+            text-align: center; 
+            align-content: center;
+            justify-content: space-between;
+            .fecha__1 { 
+                padding: 5%;
+                .img__1 {
+                    img {
+                        width: 100%;
+                        padding: 5px;
+                    }
+                }
+                .partido__1 { 
+                    color: rgb(253, 253, 253);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    box-shadow: 10px 5px 5px black;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 2px solid black;
+                    width: 100%;
+                    height: 30%;
+                    background: linear-gradient(to right, #222325, #800808 );
+                    text-align: center;
+                    margin: 10px auto;
+                }
+                .texto-fechas {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: black;
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 15px;
+                    font-weight: 500;
+                    background: #FFFFFF;
+                    text-align: center;
+                   
+                }
+            }
+            .fecha__2 {
+                padding: 5%;
+                .img__2 {
+                    img {
+                        width: 100%;
+                        padding: 5px;
+                    }
+                }
+                .partido__2 { 
+                    color: rgb(253, 253, 253);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    box-shadow: 10px 5px 5px black;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 2px solid black;
+                    width: 100%;
+                    height: 30%;
+                    background: linear-gradient(to right, #760909  , #02C3F7 );
+                    text-align: center;
+                    margin: 10px auto;
+                }    
+                .texto-fechas {
+                    color: black;
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 15px;
+                    font-weight: 500;
+                    background: #FFFFFF;
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+            .fecha__3 { 
+                padding: 5%;
+                .img__3 {
+                    img {
+                        width: 100%;
+                        padding: 5px;
+                    }
+                }
+                .partido__3 { 
+                    color: rgb(253, 253, 253);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    box-shadow: 10px 5px 5px black;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 2px solid black;
+                    width: 100%;
+                    height: 30%;
+                    background: linear-gradient(to right, #061578 , #028609 );
+                    text-align: center;
+                    margin: 10px auto;
+                }
+                .texto-fechas {
+                    color: black;
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 15px;
+                    font-weight: 500;
+                    background: #FFFFFF;
+                    text-align: center;
+                    padding: 10px;
+                }
+                
+            }        
+        }
+    }
+    /* Resumen */
+    #id-resumen {
+        color: rgb(7, 7, 7);
+        font-family: 'Pacifico';
+        font-size: 50px;
+        font-weight: 800;
+        text-align: center;
+        animation-name: mianimacion;
+        animation-duration: 4s;
+        padding-bottom: 20px;
+        padding: 15px;
+    }
+    main {
+        .resumenes {
+            display: flex;
+            flex-direction: column;
+            margin: 10px auto;
+            align-items: stretch;
+            justify-content: space-between;
+            .resumen__1 {
+                margin: 10px auto;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: grey;
+                border: 1px solid black;
+                border-radius: 10px 10px 10px 10px; 
+                box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.6);
+                padding: 10px ;
+                .subtitulo-resumen {
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                img {
+                    width: 100%;
+                    margin-top: 5px;
+                }
+                .texto-resumen {
+                    color: rgb(8, 8, 8);
+                    font-family: 'Antic Slab';
+                    font-size:  20px;
+                    font-weight: 700;
+                    text-align: justify;
+                }
+            }
+            .resumen__2 {
+                margin: 10px auto;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: grey;
+                border: 1px solid black;
+                border-radius: 10px 10px 10px 10px; 
+                box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.6);
+                padding:10px;
+                margin-top: 5px;
+                .subtitulo-resumen {
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                img {
+                    width: 100%;
+                    margin-top: 5px;
+                }
+                .texto-resumen {
+                    color: rgb(8, 8, 8);
+                    font-family: 'Antic Slab';
+                    font-size:  20px;
+                    font-weight: 700;
+                    text-align: justify;
+                }
+            }
+            .resumen__3 {
+                margin: 10px auto;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: grey;
+                border: 1px solid black;
+                border-radius: 10px 10px 10px 10px; 
+                box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.6);
+                padding:10px;
+                margin-top: 5px;
+                .subtitulo-resumen {
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                img {
+                    width: 100%;
+                    margin-top: 5px;
+                }
+                .texto-resumen {
+                    color: rgb(8, 8, 8);
+                    font-family: 'Antic Slab';
+                    font-size:  20px;
+                    font-weight: 700;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+       
     
+    /* Tabla de Posiciones */
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .tabla {
+            background: white ;
+            text-align: left;
+            width: 90%;
+            margin: 20px auto;
+            border: 1px solid black;
+            box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.6);
+                th{
+                    padding: 1%;
+                }
+                tr {
+                    border:none;
+                    padding: 1%;
+                }
+                td {
+                    padding:1%;
+                    font-size: 1em ;
+                    .img-td {
+                        width: 25px;
+                        height: 25px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            
+           
+        }
+        .table-titulo {
+            font-family: 'Bebas Neue';
+            font-size: 50px;
+            font-weight: 800;
+            font-style: italic;
+            text-align: center;
+        }
 
+    }
    
-}
+   
+            
+

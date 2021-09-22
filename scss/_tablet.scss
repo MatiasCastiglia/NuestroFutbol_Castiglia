@@ -14,7 +14,322 @@
         grid-template-rows: 50px 1fr;
         grid-gap: 10px;
         justify-items: center;
-        align-items: flex-start; 
+        align-items: flex-start;
     }
-   
+    .formulario {
+        .eleccion {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    /* Informacion de la Fecha */
+    .informacion {
+        grid-template-areas: 
+        "resultados goles partido"
+        "noticia1 goles1 partidos1"
+        "noticia2 goles2 partidos2"
+        "noticia3 goles3 partidos3";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr;
+        grid-gap: 10px;
+        align-content: center;
+        .titulo__1 {
+            grid-area: resultados;
+            text-align: center;
+        }
+        .noticia__1{
+            grid-area: noticia1;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .noticia__2{
+            grid-area: noticia2;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .noticia__3{
+            grid-area: noticia3;
+            background-color: #050E61;
+            color: white;
+            border-radius: 25% 10%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .goles {
+            grid-area: goles;
+            text-align: center;
+            display: inline;  
+            color:black;
+            font-family:'Staatliches', cursive;
+            font-size: 25px;
+            font-weight: 800;
+            background: #FFFFFF;
+            border-radius: 10px 100px / 120px;
+        }
+        .goles__1{
+            grid-area: goles1;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }       
+        }
+        .goles__2{
+            grid-area: goles2;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }   
+        }
+        .goles__3{
+            grid-area: goles3;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-goles {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }   
+        }
+        .partido {
+            grid-area: partido;
+            text-align: center;
+            display: inline;
+            color:black;
+            font-family:'Staatliches', cursive;
+            font-size: 25px;
+            font-weight: 800;
+            background: #FFFFFF;
+            border-radius: 10px 100px / 120px;
+        }
+        .partidos__1{
+            grid-area: partidos1;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }    
+        }
+        .partidos__2{
+            grid-area: partidos2;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black;
+            }    
+        }
+        .partidos__3{
+            grid-area: partidos3;
+            text-align: justify;
+            background: #566573;
+            border: 1.5px solid black;
+            box-shadow: 10px 5px 5px #AAB7B8;
+            padding: 5%;
+            .texto-partido {
+                font-family: 'Allan', cursive;
+                font-size: 20px;
+                font-weight: inherit;
+                color: black; 
+            }     
+        }
+    }
+    /* Partido de la Fecha */
+    main {
+        .partido-de-la-fecha {
+            font-family: 'Rubik Mono One', sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            animation-name: mianimacion;
+            animation-duration: 3s;
+            text-align: center;
+            padding: 15px;
+        }
+        .fecha {
+            display: flex;
+            flex-direction: row;
+            text-align: center; 
+            align-content: center;
+            justify-content: space-between;
+            .fecha__1 { 
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .img__1 {
+                    width: 200px;
+                    height: 150px;
+                    img {
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                .partido__1 { 
+                    color: rgb(253, 253, 253);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 25px;
+                    font-weight: 700;
+                    box-shadow: 10px 5px 5px black;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 2px solid black;;
+                    background: linear-gradient(to right, #222325, #800808 );
+                    text-align: center;
+                    width: 100%;
+                    height: auto;
+                    margin: 10px auto;
+                }
+                .texto-fechas {
+                    color: black;
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    background: #FFFFFF;
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+            .fecha__2 {
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .img__2 {
+                    width:200px;
+                    height: 150px;
+                    img {
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                .partido__2 { 
+                    color: rgb(253, 253, 253);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    box-shadow: 10px 5px 5px black;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 2px solid black;
+                    width: 100%;
+                    height: 30%;
+                    background: linear-gradient(to right, #760909  , #02C3F7 );
+                    text-align: center;
+                    width: 100%;
+                    height: auto;
+                }    
+                .texto-fechas {
+                    color: black;
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    background: #FFFFFF;
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+            .fecha__3 { 
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .img__3 {
+                    width:200px;
+                    height: 150px;
+                    img {
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                .partido__3 { 
+                    color: rgb(253, 253, 253);
+                    font-family: 'Playfair Display', serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    box-shadow: 10px 5px 5px black;
+                    border: 1.5px solid #FFFFFF;
+                    border-radius: 2px solid black;
+                    width: 100%;
+                    height: 30%;
+                    background: linear-gradient(to right, #061578 , #028609 );
+                    text-align: center;
+                    width: 100%;
+                    height: auto;
+                }
+                .texto-fechas {
+                    color: black;
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                    background: #FFFFFF;
+                    text-align: center;
+                    padding: 10px;
+                }
+                
+            }       
+        }
+    }
+    /* Resumen */
+   main {
+    .resumenes {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+        .resumen__1 {
+            margin: 10px;
+        }
+        .resumen__2 {
+            margin: 10px;
+        }
+        .resumen__3 {
+            margin: 10px;
+
+        }    
+    }
 }
+}
+
+    

@@ -1,0 +1,8 @@
+@keyframes mianimacion {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150PX); }
+      100% {
+        opacity: 1;
+        transform: translate(0, 0); } 
+}
